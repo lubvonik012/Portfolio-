@@ -50,6 +50,16 @@
         .skill-tags { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; }
         .skill-tags span { background: rgba(56,189,248,0.1); color: var(--accent); padding: 8px 20px; border-radius: 20px; font-weight: 500; border: 1px solid rgba(56,189,248,0.2); font-size: 14px; }
 
+        /* SERVICES SECTION */
+        .services-section { background-color: var(--bg-primary); }
+        .services-intro { max-width: 700px; margin: -20px auto 40px; text-align: center; color: var(--text-muted); font-size: 1.05rem; line-height: 1.8; font-style: italic; }
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+        .service-card { background: var(--bg-secondary); border-radius: 12px; padding: 25px; border: 1px solid rgba(56,189,248,0.1); transition: transform 0.3s, box-shadow 0.3s; }
+        .service-card:hover { transform: translateY(-5px); box-shadow: 0 10px 25px rgba(56,189,248,0.15); }
+        .service-icon { font-size: 2rem; margin-bottom: 15px; }
+        .service-card h3 { font-size: 1.1rem; color: var(--accent); margin-bottom: 10px; }
+        .service-card p { color: var(--text-muted); font-size: 0.92rem; line-height: 1.7; }
+
         .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
         .project-card { background: var(--bg-secondary); border-radius: 12px; overflow: hidden; border: 1px solid rgba(255,255,255,0.06); transition: transform 0.3s, box-shadow 0.3s; }
         .project-card:hover { transform: translateY(-6px); box-shadow: 0 12px 30px rgba(56,189,248,0.15); }
@@ -97,6 +107,7 @@
         <ul>
             <li><a href="#hero">Home</a></li>
             <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
@@ -104,39 +115,88 @@
     <button class="hamburger" onclick="toggleMenu()"><i class="fas fa-bars"></i></button>
 </header>
 
+<!-- HERO -->
 <section id="hero" class="hero-section">
     <div class="hero-content">
         <h1>Hi, I'm <span class="highlight">Mohammed Jamiu</span></h1>
-        <h2>Web Developer & Forex Enthusiast</h2>
-        <p>I build clean, modern websites and apps — based in Ilorin, Nigeria 🇳🇬</p>
+        <h2>Web Developer & Resume Writer</h2>
+        <p>I build modern websites and craft professional resumes that help people land jobs — based in Ilorin, Nigeria 🇳🇬</p>
         <div class="hero-tags">
             <span class="hero-tag">🌐 Web Development</span>
+            <span class="hero-tag">📄 Resume Writing</span>
             <span class="hero-tag">🐍 Python</span>
             <span class="hero-tag">📈 Forex Trading</span>
-            <span class="hero-tag">🤖 AI Tools</span>
         </div>
-        <a href="#projects" class="btn">View My Work</a>
+        <a href="#services" class="btn">View My Services</a>
         <a href="https://wa.me/2347042804483" target="_blank" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> Hire Me</a>
     </div>
 </section>
 
+<!-- ABOUT -->
 <section id="about" class="about-section">
     <div class="container">
         <h2>About Me</h2>
         <div class="about-text">
-            <p>I'm Mohammed Jamiu, a self-taught developer based in Ilorin, Nigeria. I'm on a journey to master web development and Python programming — building real projects along the way. I believe in learning by doing, and every project I build teaches me something new.</p>
-            <p style="margin-top:15px">Outside of coding, I study forex trading — passionate about financial markets and the discipline it takes to succeed in them. My goal is to combine both skills: technology and finance.</p>
+            <p>I'm Mohammed Jamiu, a self-taught developer and professional resume writer based in Ilorin, Nigeria. I help job seekers land interviews with powerful, ATS-friendly resumes — and I build clean, modern websites for individuals and businesses.</p>
+            <p style="margin-top:15px">I'm also studying forex trading, with a long-term goal of combining technology and finance to build powerful market tools.</p>
             <div class="skills">
                 <h3>My Skills</h3>
                 <div class="skill-tags">
-                    <span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>Python</span>
-                    <span>Responsive Design</span><span>API Integration</span><span>Forex Trading</span><span>AI Tools</span>
+                    <span>HTML5</span>
+                    <span>CSS3</span>
+                    <span>JavaScript</span>
+                    <span>Python</span>
+                    <span>Resume Writing</span>
+                    <span>ATS Optimization</span>
+                    <span>API Integration</span>
+                    <span>Forex Trading</span>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
+<!-- SERVICES -->
+<section id="services" class="services-section">
+    <div class="container">
+        <h2>My Services</h2>
+        <p class="services-intro">"I help job seekers stand out and land interviews by crafting high-impact, professional resumes. Here is what I offer my clients:"</p>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">🎯</div>
+                <h3>ATS-Friendly Optimization</h3>
+                <p>Tailoring your resume with industry keywords so it passes automatic hiring filters and gets seen by real recruiters.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">✨</div>
+                <h3>Professional Formatting</h3>
+                <p>Structuring your experience into a clean, modern, and readable layout that impresses hiring managers instantly.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">💬</div>
+                <h3>Compelling Summaries</h3>
+                <p>Writing powerful intro profiles that immediately highlight your top career achievements and make employers want to read more.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">⚡</div>
+                <h3>Action-Oriented Language</h3>
+                <p>Transforming basic job descriptions into impact-driven bullet points that show real results and value.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🔧</div>
+                <h3>Custom Revisions</h3>
+                <p>Tweaking and correcting your existing drafts until they are completely polished and ready to send.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🌐</div>
+                <h3>Website Development</h3>
+                <p>Building clean, responsive, mobile-friendly websites for personal portfolios, businesses, and landing pages.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- PROJECTS -->
 <section id="projects" class="projects-section">
     <div class="container">
         <h2>Featured Projects</h2>
@@ -172,17 +232,18 @@
     </div>
 </section>
 
+<!-- CONTACT -->
 <section id="contact" class="contact-section">
     <div class="container">
         <h2>Get In Touch</h2>
-        <p class="contact-sub">Have a project in mind? I respond fastest on WhatsApp!</p>
+        <p class="contact-sub">Need a resume or a website? I respond fastest on WhatsApp!</p>
         <div class="whatsapp-banner">
             <p>💬 Tap below to message me directly on WhatsApp:</p>
             <a href="https://wa.me/2347042804483?text=Hi%20Mohammed!%20I%20saw%20your%20portfolio%20and%20I%27d%20like%20to%20hire%20you." target="_blank" class="btn-wa-big">
                 <i class="fab fa-whatsapp"></i> Chat on WhatsApp
             </a>
         </div>
-        <form class="contact-form" action="https://formspree.io/f/atolagbemohammedjamiu@gmail.com" method="POST">
+        <form class="contact-form" action="https://formspree.io/f/mwvdywrg" method="POST">
             <input type="text" name="name" placeholder="Your Name" required>
             <input type="email" name="email" placeholder="Your Email" required>
             <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
@@ -191,6 +252,7 @@
     </div>
 </section>
 
+<!-- FOOTER -->
 <footer>
     <div class="social-links">
         <a href="https://wa.me/2347042804483" target="_blank" class="whatsapp" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
@@ -206,4 +268,4 @@
     }
 </script>
 </body>
-</html>
+    </html>
