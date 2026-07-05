@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohammed Jamiu | Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --bg-primary: #0f172a;
+            --bg-secondary: #1e293b;
+            --accent: #38bdf8;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', system-ui, sans-serif; }
+        html { scroll-behavior: smooth; }
+        body { background-color: var(--bg-primary); color: var(--text-main); line-height: 1.6; }
+        .container { max-width: 1100px; margin: 0 auto; padding: 80px 20px; }
+
+        header { display: flex; justify-content: space-between; align-items: center; padding: 20px 5%; position: fixed; width: 100%; top: 0; background: rgba(15,23,42,0.95); backdrop-filter: blur(10px); z-index: 100; border-bottom: 1px solid rgba(255,255,255,0.05); }
+        .logo { font-size: 24px; font-weight: 800; letter-spacing: 1px; }
+        .logo span { color: var(--accent); }
+        nav ul { display: flex; list-style: none; }
+        nav ul li { margin-left: 25px; }
+        nav ul li a { text-decoration: none; color: var(--text-muted); font-weight: 500; transition: color 0.3s; }
+        nav ul li a:hover { color: var(--accent); }
+        .hamburger { display: none; background: transparent; border: none; color: var(--text-main); font-size: 22px; cursor: pointer; }
+
+        .hero-section { height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; padding: 0 20px; background: radial-gradient(circle at top right, rgba(56,189,248,0.12), transparent), radial-gradient(circle at bottom left, rgba(56,189,248,0.06), transparent); }
+        .hero-content h1 { font-size: 3.5rem; margin-bottom: 10px; }
+        .highlight { color: var(--accent); }
+        .hero-content h2 { font-size: 1.8rem; color: var(--text-muted); margin-bottom: 20px; font-weight: 400; }
+        .hero-content p { max-width: 520px; margin: 0 auto 15px; color: var(--text-muted); }
+        .hero-tags { display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; margin-bottom: 30px; }
+        .hero-tag { background: rgba(56,189,248,0.1); color: var(--accent); padding: 5px 14px; border-radius: 20px; font-size: 13px; border: 1px solid rgba(56,189,248,0.2); }
+
+        .btn { display: inline-block; background-color: var(--accent); color: var(--bg-primary); padding: 12px 30px; border-radius: 30px; text-decoration: none; font-weight: 700; border: none; cursor: pointer; transition: transform 0.2s, box-shadow 0.2s; font-size: 15px; }
+        .btn:hover { transform: translateY(-2px); box-shadow: 0 5px 20px rgba(56,189,248,0.4); }
+        .btn-whatsapp { background: #25D366; color: #fff; margin-left: 12px; }
+        .btn-whatsapp:hover { box-shadow: 0 5px 20px rgba(37,211,102,0.4); }
+
+        h2 { font-size: 2.2rem; text-align: center; margin-bottom: 40px; position: relative; }
+        h2::after { content: ''; display: block; width: 50px; height: 4px; background: var(--accent); margin: 10px auto 0; border-radius: 2px; }
+
+        .about-section { background-color: var(--bg-secondary); }
+        .about-text { max-width: 800px; margin: 0 auto; text-align: center; font-size: 1.05rem; color: var(--text-muted); line-height: 1.8; }
+        .skills { margin-top: 40px; }
+        .skills h3 { color: var(--text-main); margin-bottom: 20px; text-align: center; }
+        .skill-tags { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; }
+        .skill-tags span { background: rgba(56,189,248,0.1); color: var(--accent); padding: 8px 20px; border-radius: 20px; font-weight: 500; border: 1px solid rgba(56,189,248,0.2); font-size: 14px; }
+
+        .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .project-card { background: var(--bg-secondary); border-radius: 12px; overflow: hidden; border: 1px solid rgba(255,255,255,0.06); transition: transform 0.3s, box-shadow 0.3s; }
+        .project-card:hover { transform: translateY(-6px); box-shadow: 0 12px 30px rgba(56,189,248,0.15); }
+        .project-img img { width: 100%; height: 200px; object-fit: cover; }
+        .project-badge { display: inline-block; background: var(--accent); color: var(--bg-primary); font-size: 11px; font-weight: 700; padding: 3px 10px; border-radius: 20px; margin-bottom: 10px; text-transform: uppercase; }
+        .project-info { padding: 25px; }
+        .project-info h3 { margin-bottom: 8px; font-size: 1.3rem; }
+        .project-info p { color: var(--text-muted); margin-bottom: 20px; font-size: 0.95rem; }
+        .project-link { color: var(--accent); text-decoration: none; font-weight: 600; font-size: 14px; }
+
+        .contact-section { background-color: var(--bg-secondary); }
+        .contact-sub { text-align: center; color: var(--text-muted); margin-top: -30px; margin-bottom: 40px; }
+        .whatsapp-banner { max-width: 600px; margin: 0 auto 40px; background: rgba(37,211,102,0.1); border: 1px solid rgba(37,211,102,0.3); border-radius: 12px; padding: 20px 25px; text-align: center; }
+        .whatsapp-banner p { color: #94a3b8; margin-bottom: 15px; font-size: 15px; }
+        .btn-wa-big { display: inline-flex; align-items: center; gap: 8px; background: #25D366; color: #fff; padding: 13px 28px; border-radius: 30px; text-decoration: none; font-weight: 700; font-size: 15px; transition: transform 0.2s, box-shadow 0.2s; }
+        .btn-wa-big:hover { transform: translateY(-2px); box-shadow: 0 5px 20px rgba(37,211,102,0.4); }
+        .contact-form { max-width: 600px; margin: 0 auto; display: flex; flex-direction: column; gap: 20px; }
+        .contact-form input, .contact-form textarea { width: 100%; padding: 15px; background: var(--bg-primary); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; color: white; font-size: 1rem; outline: none; transition: border-color 0.3s; }
+        .contact-form input:focus, .contact-form textarea:focus { border-color: var(--accent); }
+        .contact-form .btn { align-self: center; }
+
+        footer { text-align: center; padding: 40px 20px; color: var(--text-muted); border-top: 1px solid rgba(255,255,255,0.05); }
+        .social-links { margin-bottom: 15px; }
+        .social-links a { color: var(--text-muted); font-size: 1.5rem; margin: 0 12px; transition: color 0.3s; }
+        .social-links a.whatsapp:hover { color: #25D366; }
+        .social-links a.tiktok:hover { color: #ff0050; }
+
+        @media (max-width: 768px) {
+            .hamburger { display: block; }
+            #main-nav { display: none; position: fixed; top: 70px; left: 0; width: 100%; background: rgba(15,23,42,0.98); padding: 20px 5%; z-index: 99; border-bottom: 1px solid rgba(255,255,255,0.05); }
+            #main-nav.open { display: block; }
+            #main-nav ul { flex-direction: column; }
+            #main-nav ul li { margin: 12px 0; }
+            .hero-content h1 { font-size: 2.2rem; }
+            .hero-content h2 { font-size: 1.2rem; }
+            .btn-whatsapp { margin-left: 0; margin-top: 10px; display: block; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo">MJ<span>.DEV</span></div>
+    <nav id="main-nav">
+        <ul>
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <button class="hamburger" onclick="toggleMenu()"><i class="fas fa-bars"></i></button>
+</header>
+
+<section id="hero" class="hero-section">
+    <div class="hero-content">
+        <h1>Hi, I'm <span class="highlight">Mohammed Jamiu</span></h1>
+        <h2>Web Developer & Forex Enthusiast</h2>
+        <p>I build clean, modern websites and apps — based in Ilorin, Nigeria 🇳🇬</p>
+        <div class="hero-tags">
+            <span class="hero-tag">🌐 Web Development</span>
+            <span class="hero-tag">🐍 Python</span>
+            <span class="hero-tag">📈 Forex Trading</span>
+            <span class="hero-tag">🤖 AI Tools</span>
+        </div>
+        <a href="#projects" class="btn">View My Work</a>
+        <a href="https://wa.me/2347042804483" target="_blank" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> Hire Me</a>
+    </div>
+</section>
+
+<section id="about" class="about-section">
+    <div class="container">
+        <h2>About Me</h2>
+        <div class="about-text">
+            <p>I'm Mohammed Jamiu, a self-taught developer based in Ilorin, Nigeria. I'm on a journey to master web development and Python programming — building real projects along the way. I believe in learning by doing, and every project I build teaches me something new.</p>
+            <p style="margin-top:15px">Outside of coding, I study forex trading — passionate about financial markets and the discipline it takes to succeed in them. My goal is to combine both skills: technology and finance.</p>
+            <div class="skills">
+                <h3>My Skills</h3>
+                <div class="skill-tags">
+                    <span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>Python</span>
+                    <span>Responsive Design</span><span>API Integration</span><span>Forex Trading</span><span>AI Tools</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="projects" class="projects-section">
+    <div class="container">
+        <h2>Featured Projects</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <div class="project-img"><img src="https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=600&q=80" alt="CineVault"></div>
+                <div class="project-info">
+                    <span class="project-badge">Live Project</span>
+                    <h3>CineVault</h3>
+                    <p>A Netflix-style movie discovery app with real posters, ratings, trailers and search — powered by the TMDB API.</p>
+                    <a href="#" class="project-link">View Project <i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-img"><img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=600&q=80" alt="FXLearn"></div>
+                <div class="project-info">
+                    <span class="project-badge">Education</span>
+                    <h3>FXLearn</h3>
+                    <p>A forex trading education platform covering beginner to intermediate topics — risk management, candlestick patterns and more.</p>
+                    <a href="#" class="project-link">View Project <i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-img"><img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=600&q=80" alt="Python Scripts"></div>
+                <div class="project-info">
+                    <span class="project-badge">In Progress</span>
+                    <h3>Python Scripts</h3>
+                    <p>A growing collection of Python scripts including a USD-to-Naira currency converter and automation experiments.</p>
+                    <a href="#" class="project-link">View Project <i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="contact" class="contact-section">
+    <div class="container">
+        <h2>Get In Touch</h2>
+        <p class="contact-sub">Have a project in mind? I respond fastest on WhatsApp!</p>
+        <div class="whatsapp-banner">
+            <p>💬 Tap below to message me directly on WhatsApp:</p>
+            <a href="https://wa.me/2347042804483?text=Hi%20Mohammed!%20I%20saw%20your%20portfolio%20and%20I%27d%20like%20to%20hire%20you." target="_blank" class="btn-wa-big">
+                <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+            </a>
+        </div>
+        <form class="contact-form" action="https://formspree.io/f/atolagbemohammedjamiu@gmail.com" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+            <button type="submit" class="btn">Send Message</button>
+        </form>
+    </div>
+</section>
+
+<footer>
+    <div class="social-links">
+        <a href="https://wa.me/2347042804483" target="_blank" class="whatsapp" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://www.tiktok.com/@your_tiktok_username" target="_blank" class="tiktok" title="TikTok"><i class="fab fa-tiktok"></i></a>
+    </div>
+    <p>&copy; 2026 Mohammed Jamiu. All rights reserved.</p>
+    <p style="margin-top:8px;font-size:13px">📧 atolagbemohammedjamiu@gmail.com</p>
+</footer>
+
+<script>
+    function toggleMenu() {
+        document.getElementById('main-nav').classList.toggle('open');
+    }
+</script>
+</body>
+</html>
