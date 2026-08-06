@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mohammed Jamiu | Portfolio</title>
+    <title>Mohammed Jamiu | Digital Content Strategist & Web Developer</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
@@ -18,89 +18,103 @@
         body { background-color: var(--bg-primary); color: var(--text-main); line-height: 1.6; }
         .container { max-width: 1100px; margin: 0 auto; padding: 80px 20px; }
 
+        /* HEADER */
         header { display: flex; justify-content: space-between; align-items: center; padding: 20px 5%; position: fixed; width: 100%; top: 0; background: rgba(15,23,42,0.95); backdrop-filter: blur(10px); z-index: 100; border-bottom: 1px solid rgba(255,255,255,0.05); }
         .logo { font-size: 24px; font-weight: 800; letter-spacing: 1px; }
         .logo span { color: var(--accent); }
         nav ul { display: flex; list-style: none; }
-        nav ul li { margin-left: 25px; }
-        nav ul li a { text-decoration: none; color: var(--text-muted); font-weight: 500; transition: color 0.3s; }
+        nav ul li { margin-left: 20px; }
+        nav ul li a { text-decoration: none; color: var(--text-muted); font-weight: 500; transition: color 0.3s; font-size: 14px; }
         nav ul li a:hover { color: var(--accent); }
         .hamburger { display: none; background: transparent; border: none; color: var(--text-main); font-size: 22px; cursor: pointer; }
 
+        /* HERO */
         .hero-section { height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; padding: 0 20px; background: radial-gradient(circle at top right, rgba(56,189,248,0.12), transparent), radial-gradient(circle at bottom left, rgba(56,189,248,0.06), transparent); }
-        .hero-content h1 { font-size: 3.5rem; margin-bottom: 10px; }
+        .hero-content h1 { font-size: 3.2rem; margin-bottom: 10px; }
         .highlight { color: var(--accent); }
-        .hero-content h2 { font-size: 1.8rem; color: var(--text-muted); margin-bottom: 20px; font-weight: 400; }
-        .hero-content p { max-width: 520px; margin: 0 auto 15px; color: var(--text-muted); }
-        .hero-tags { display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; margin-bottom: 30px; }
-        .hero-tag { background: rgba(56,189,248,0.1); color: var(--accent); padding: 5px 14px; border-radius: 20px; font-size: 13px; border: 1px solid rgba(56,189,248,0.2); }
+        .hero-content h2 { font-size: 1.5rem; color: var(--text-muted); margin-bottom: 15px; font-weight: 400; }
+        .hero-content p { max-width: 600px; margin: 0 auto 20px; color: var(--text-muted); font-size: 1.05rem; line-height: 1.8; }
+        .hero-tags { display: flex; justify-content: center; gap: 8px; flex-wrap: wrap; margin-bottom: 30px; }
+        .hero-tag { background: rgba(56,189,248,0.1); color: var(--accent); padding: 5px 13px; border-radius: 20px; font-size: 12px; border: 1px solid rgba(56,189,248,0.2); }
 
-        .btn { display: inline-block; background-color: var(--accent); color: var(--bg-primary); padding: 12px 30px; border-radius: 30px; text-decoration: none; font-weight: 700; border: none; cursor: pointer; transition: transform 0.2s, box-shadow 0.2s; font-size: 15px; }
+        .btn { display: inline-block; background-color: var(--accent); color: var(--bg-primary); padding: 12px 28px; border-radius: 30px; text-decoration: none; font-weight: 700; border: none; cursor: pointer; transition: transform 0.2s, box-shadow 0.2s; font-size: 15px; }
         .btn:hover { transform: translateY(-2px); box-shadow: 0 5px 20px rgba(56,189,248,0.4); }
         .btn-whatsapp { background: #25D366; color: #fff; margin-left: 12px; }
         .btn-whatsapp:hover { box-shadow: 0 5px 20px rgba(37,211,102,0.4); }
 
+        /* SECTION TITLES */
         h2 { font-size: 2.2rem; text-align: center; margin-bottom: 40px; position: relative; }
         h2::after { content: ''; display: block; width: 50px; height: 4px; background: var(--accent); margin: 10px auto 0; border-radius: 2px; }
 
+        /* ABOUT */
         .about-section { background-color: var(--bg-secondary); }
         .about-text { max-width: 800px; margin: 0 auto; text-align: center; font-size: 1.05rem; color: var(--text-muted); line-height: 1.8; }
         .skills { margin-top: 40px; }
         .skills h3 { color: var(--text-main); margin-bottom: 20px; text-align: center; }
-        .skill-tags { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; }
-        .skill-tags span { background: rgba(56,189,248,0.1); color: var(--accent); padding: 8px 20px; border-radius: 20px; font-weight: 500; border: 1px solid rgba(56,189,248,0.2); font-size: 14px; }
+        .skill-tags { display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; }
+        .skill-tags span { background: rgba(56,189,248,0.1); color: var(--accent); padding: 8px 18px; border-radius: 20px; font-weight: 500; border: 1px solid rgba(56,189,248,0.2); font-size: 13px; }
 
-        /* SERVICES SECTION */
+        /* SERVICES */
         .services-section { background-color: var(--bg-primary); }
         .services-intro { max-width: 700px; margin: -20px auto 40px; text-align: center; color: var(--text-muted); font-size: 1.05rem; line-height: 1.8; font-style: italic; }
-        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); gap: 20px; }
         .service-card { background: var(--bg-secondary); border-radius: 12px; padding: 25px; border: 1px solid rgba(56,189,248,0.1); transition: transform 0.3s, box-shadow 0.3s; }
         .service-card:hover { transform: translateY(-5px); box-shadow: 0 10px 25px rgba(56,189,248,0.15); }
         .service-icon { font-size: 2rem; margin-bottom: 15px; }
-        .service-card h3 { font-size: 1.1rem; color: var(--accent); margin-bottom: 10px; }
-        .service-card p { color: var(--text-muted); font-size: 0.92rem; line-height: 1.7; }
+        .service-card h3 { font-size: 1.05rem; color: var(--accent); margin-bottom: 10px; }
+        .service-card p { color: var(--text-muted); font-size: 0.9rem; line-height: 1.7; }
 
+        /* PROJECTS */
+        .projects-section { background-color: var(--bg-secondary); }
         .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-        .project-card { background: var(--bg-secondary); border-radius: 12px; overflow: hidden; border: 1px solid rgba(255,255,255,0.06); transition: transform 0.3s, box-shadow 0.3s; }
+        .project-card { background: var(--bg-primary); border-radius: 12px; overflow: hidden; border: 1px solid rgba(255,255,255,0.06); transition: transform 0.3s, box-shadow 0.3s; }
         .project-card:hover { transform: translateY(-6px); box-shadow: 0 12px 30px rgba(56,189,248,0.15); }
         .project-img img { width: 100%; height: 200px; object-fit: cover; }
         .project-badge { display: inline-block; background: var(--accent); color: var(--bg-primary); font-size: 11px; font-weight: 700; padding: 3px 10px; border-radius: 20px; margin-bottom: 10px; text-transform: uppercase; }
         .project-info { padding: 25px; }
-        .project-info h3 { margin-bottom: 8px; font-size: 1.3rem; }
-        .project-info p { color: var(--text-muted); margin-bottom: 20px; font-size: 0.95rem; }
+        .project-info h3 { margin-bottom: 8px; font-size: 1.2rem; }
+        .project-info p { color: var(--text-muted); margin-bottom: 20px; font-size: 0.92rem; line-height: 1.7; }
         .project-link { color: var(--accent); text-decoration: none; font-weight: 600; font-size: 14px; }
+        .project-link:hover { text-decoration: underline; }
 
-        .contact-section { background-color: var(--bg-secondary); }
+        /* CONTACT */
+        .contact-section { background-color: var(--bg-primary); }
         .contact-sub { text-align: center; color: var(--text-muted); margin-top: -30px; margin-bottom: 40px; }
         .whatsapp-banner { max-width: 600px; margin: 0 auto 40px; background: rgba(37,211,102,0.1); border: 1px solid rgba(37,211,102,0.3); border-radius: 12px; padding: 20px 25px; text-align: center; }
         .whatsapp-banner p { color: #94a3b8; margin-bottom: 15px; font-size: 15px; }
         .btn-wa-big { display: inline-flex; align-items: center; gap: 8px; background: #25D366; color: #fff; padding: 13px 28px; border-radius: 30px; text-decoration: none; font-weight: 700; font-size: 15px; transition: transform 0.2s, box-shadow 0.2s; }
         .btn-wa-big:hover { transform: translateY(-2px); box-shadow: 0 5px 20px rgba(37,211,102,0.4); }
         .contact-form { max-width: 600px; margin: 0 auto; display: flex; flex-direction: column; gap: 20px; }
-        .contact-form input, .contact-form textarea { width: 100%; padding: 15px; background: var(--bg-primary); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; color: white; font-size: 1rem; outline: none; transition: border-color 0.3s; }
+        .contact-form input, .contact-form textarea { width: 100%; padding: 15px; background: var(--bg-secondary); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; color: white; font-size: 1rem; outline: none; transition: border-color 0.3s; }
         .contact-form input:focus, .contact-form textarea:focus { border-color: var(--accent); }
         .contact-form .btn { align-self: center; }
 
+        /* FOOTER */
         footer { text-align: center; padding: 40px 20px; color: var(--text-muted); border-top: 1px solid rgba(255,255,255,0.05); }
         .social-links { margin-bottom: 15px; }
         .social-links a { color: var(--text-muted); font-size: 1.5rem; margin: 0 12px; transition: color 0.3s; }
         .social-links a.whatsapp:hover { color: #25D366; }
         .social-links a.tiktok:hover { color: #ff0050; }
+        .social-links a.telegram:hover { color: #0088cc; }
+        .btn-telegram { background: #0088cc; color: #fff; margin-left: 12px; }
+        .btn-telegram:hover { box-shadow: 0 5px 20px rgba(0,136,204,0.4); }
 
+        /* MOBILE */
         @media (max-width: 768px) {
             .hamburger { display: block; }
             #main-nav { display: none; position: fixed; top: 70px; left: 0; width: 100%; background: rgba(15,23,42,0.98); padding: 20px 5%; z-index: 99; border-bottom: 1px solid rgba(255,255,255,0.05); }
             #main-nav.open { display: block; }
             #main-nav ul { flex-direction: column; }
             #main-nav ul li { margin: 12px 0; }
-            .hero-content h1 { font-size: 2.2rem; }
-            .hero-content h2 { font-size: 1.2rem; }
+            .hero-content h1 { font-size: 2rem; }
+            .hero-content h2 { font-size: 1.1rem; }
             .btn-whatsapp { margin-left: 0; margin-top: 10px; display: block; text-align: center; }
         }
     </style>
 </head>
 <body>
 
+<!-- HEADER -->
 <header>
     <div class="logo">MJ<span>.DEV</span></div>
     <nav id="main-nav">
@@ -119,13 +133,16 @@
 <section id="hero" class="hero-section">
     <div class="hero-content">
         <h1>Hi, I'm <span class="highlight">Mohammed Jamiu</span></h1>
-        <h2>Web Developer & Resume Writer</h2>
-        <p>I build modern websites and craft professional resumes that help people land jobs — based in Ilorin, Nigeria 🇳🇬</p>
+        <h2>Digital Content Strategist & Web Developer</h2>
+        <p>I build websites, write copy that converts, and create content strategies that attract the right audience — so your brand grows and your business wins.</p>
         <div class="hero-tags">
             <span class="hero-tag">🌐 Web Development</span>
+            <span class="hero-tag">✍️ Copywriting</span>
+            <span class="hero-tag">📈 SEO</span>
+            <span class="hero-tag">📣 Digital Marketing</span>
+            <span class="hero-tag">🧠 Content Strategy</span>
             <span class="hero-tag">📄 Resume Writing</span>
             <span class="hero-tag">🐍 Python</span>
-            <span class="hero-tag">📈 Forex Trading</span>
         </div>
         <a href="#services" class="btn">View My Services</a>
         <a href="https://wa.me/2347042804483" target="_blank" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> Hire Me</a>
@@ -137,8 +154,9 @@
     <div class="container">
         <h2>About Me</h2>
         <div class="about-text">
-            <p>I'm Mohammed Jamiu, a self-taught developer and professional resume writer based in Ilorin, Nigeria. I help job seekers land interviews with powerful, ATS-friendly resumes — and I build clean, modern websites for individuals and businesses.</p>
-            <p style="margin-top:15px">I'm also studying forex trading, with a long-term goal of combining technology and finance to build powerful market tools.</p>
+            <p>I'm Mohammed Jamiu — a Digital Content Strategist, Web Developer, and Resume Writer based in Ilorin, Nigeria. I help individuals and businesses grow their presence online by combining two powerful forces: strategic content and clean, modern web development.</p>
+            <p style="margin-top:15px">Whether you need a website that converts visitors into clients, copy that compels people to take action, an SEO strategy that drives organic traffic, or a resume that lands interviews — I bring the full package. I believe great results come from understanding your audience deeply and delivering content that speaks directly to them.</p>
+            <p style="margin-top:15px">I also study forex trading, with a long-term goal of combining technology and financial markets to build powerful data-driven tools.</p>
             <div class="skills">
                 <h3>My Skills</h3>
                 <div class="skill-tags">
@@ -146,6 +164,11 @@
                     <span>CSS3</span>
                     <span>JavaScript</span>
                     <span>Python</span>
+                    <span>Copywriting</span>
+                    <span>SEO</span>
+                    <span>Digital Marketing</span>
+                    <span>Content Strategy</span>
+                    <span>Content Automation</span>
                     <span>Resume Writing</span>
                     <span>ATS Optimization</span>
                     <span>API Integration</span>
@@ -160,38 +183,57 @@
 <section id="services" class="services-section">
     <div class="container">
         <h2>My Services</h2>
-        <p class="services-intro">"I help job seekers stand out and land interviews by crafting high-impact, professional resumes. Here is what I offer my clients:"</p>
+        <p class="services-intro">"I help businesses and individuals grow online through strategic content, persuasive copy, and clean web development. Here is what I offer:"</p>
         <div class="services-grid">
+
             <div class="service-card">
-                <div class="service-icon">🎯</div>
-                <h3>ATS-Friendly Optimization</h3>
-                <p>Tailoring your resume with industry keywords so it passes automatic hiring filters and gets seen by real recruiters.</p>
+                <div class="service-icon">✍️</div>
+                <h3>Copywriting & Email Sequences</h3>
+                <p>I write persuasive copy that turns readers into buyers — from sales pages and landing pages to email sequences that nurture leads and drive conversions.</p>
             </div>
+
             <div class="service-card">
-                <div class="service-icon">✨</div>
-                <h3>Professional Formatting</h3>
-                <p>Structuring your experience into a clean, modern, and readable layout that impresses hiring managers instantly.</p>
+                <div class="service-icon">🔍</div>
+                <h3>SEO Content Optimization</h3>
+                <p>I research keywords people are actually searching for, optimize your content to rank higher on search engines, and write meta descriptions and headlines that get clicks.</p>
             </div>
+
             <div class="service-card">
-                <div class="service-icon">💬</div>
-                <h3>Compelling Summaries</h3>
-                <p>Writing powerful intro profiles that immediately highlight your top career achievements and make employers want to read more.</p>
+                <div class="service-icon">🧠</div>
+                <h3>Digital Content Strategy</h3>
+                <p>I create content plans that attract the right audience, plan and execute social media campaigns, and turn followers into paying customers through strategic positioning.</p>
             </div>
+
             <div class="service-card">
                 <div class="service-icon">⚡</div>
-                <h3>Action-Oriented Language</h3>
-                <p>Transforming basic job descriptions into impact-driven bullet points that show real results and value.</p>
+                <h3>AI-Powered Content Generation</h3>
+                <p>I produce high-quality content at scale — 30 social posts, 5 blogs, or a full email sequence — combining AI efficiency with human creativity and strategy for faster turnarounds.</p>
             </div>
+
             <div class="service-card">
-                <div class="service-icon">🔧</div>
-                <h3>Custom Revisions</h3>
-                <p>Tweaking and correcting your existing drafts until they are completely polished and ready to send.</p>
+                <div class="service-icon">🤖</div>
+                <h3>Content Automation Systems</h3>
+                <p>I build workflows and systems that generate consistent content on autopilot — saving clients hours of manual work while maintaining quality and brand voice.</p>
             </div>
+
+            <div class="service-card">
+                <div class="service-icon">🎯</div>
+                <h3>ATS-Friendly Resume Writing</h3>
+                <p>I craft resumes with industry keywords that pass automatic hiring filters, powerful summaries that highlight your achievements, and impact-driven bullet points that impress.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">✨</div>
+                <h3>Professional CV Formatting</h3>
+                <p>I structure your experience into a clean, modern, readable layout with action-oriented language and custom revisions until your CV is completely polished and ready to send.</p>
+            </div>
+
             <div class="service-card">
                 <div class="service-icon">🌐</div>
                 <h3>Website Development</h3>
-                <p>Building clean, responsive, mobile-friendly websites for personal portfolios, businesses, and landing pages.</p>
+                <p>I build clean, responsive, mobile-friendly websites for personal portfolios, businesses, and landing pages — with real API integrations and professional design.</p>
             </div>
+
         </div>
     </div>
 </section>
@@ -201,33 +243,55 @@
     <div class="container">
         <h2>Featured Projects</h2>
         <div class="projects-grid">
+
             <div class="project-card">
-                <div class="project-img"><img src="https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=600&q=80" alt="CineVault"></div>
+                <div class="project-img">
+                    <img src="https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=600&q=80" alt="CineVault">
+                </div>
                 <div class="project-info">
                     <span class="project-badge">Live Project</span>
                     <h3>CineVault</h3>
-                    <p>A Netflix-style movie discovery app with real posters, ratings, trailers and search — powered by the TMDB API.</p>
+                    <p>A Netflix-style movie discovery web app with real posters, live ratings, trailers and search — connected to a live movie database API. Demonstrates full API integration and responsive UI design.</p>
                     <a href="#" class="project-link">View Project <i class="fas fa-external-link-alt"></i></a>
                 </div>
             </div>
+
             <div class="project-card">
-                <div class="project-img"><img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=600&q=80" alt="FXLearn"></div>
+                <div class="project-img">
+                    <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=600&q=80" alt="FXLearn">
+                </div>
                 <div class="project-info">
-                    <span class="project-badge">Education</span>
+                    <span class="project-badge">Content + Web</span>
                     <h3>FXLearn</h3>
-                    <p>A forex trading education platform covering beginner to intermediate topics — risk management, candlestick patterns and more.</p>
+                    <p>A complete forex trading education platform — combining web development with structured content strategy. Covers beginner to intermediate topics including risk management, market psychology, and technical analysis.</p>
                     <a href="#" class="project-link">View Project <i class="fas fa-external-link-alt"></i></a>
                 </div>
             </div>
+
             <div class="project-card">
-                <div class="project-img"><img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=600&q=80" alt="Python Scripts"></div>
+                <div class="project-img">
+                    <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=600&q=80" alt="Content Strategy">
+                </div>
+                <div class="project-info">
+                    <span class="project-badge">Copywriting</span>
+                    <h3>Content & Copy Work</h3>
+                    <p>A growing portfolio of copywriting and content strategy work — including persuasive service descriptions, professional resume rewrites, social media copy, and SEO-optimized content for various clients.</p>
+                    <a href="https://wa.me/2347042804483" class="project-link">Request Samples <i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-img">
+                    <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=600&q=80" alt="Python Scripts">
+                </div>
                 <div class="project-info">
                     <span class="project-badge">In Progress</span>
-                    <h3>Python Scripts</h3>
-                    <p>A growing collection of Python scripts including a USD-to-Naira currency converter and automation experiments.</p>
+                    <h3>Python Automation Scripts</h3>
+                    <p>A growing collection of Python scripts including a USD-to-Naira currency converter, conditional logic programs, and automation experiments — built as part of an ongoing development journey.</p>
                     <a href="#" class="project-link">View Project <i class="fas fa-external-link-alt"></i></a>
                 </div>
             </div>
+
         </div>
     </div>
 </section>
@@ -236,17 +300,21 @@
 <section id="contact" class="contact-section">
     <div class="container">
         <h2>Get In Touch</h2>
-        <p class="contact-sub">Need a resume or a website? I respond fastest on WhatsApp!</p>
+        <p class="contact-sub">Need a website, copy that converts, or a resume that lands interviews? Let's talk!</p>
         <div class="whatsapp-banner">
-            <p>💬 Tap below to message me directly on WhatsApp:</p>
+            <p>💬 Reach me instantly on WhatsApp or Telegram — I respond fast!</p>
             <a href="https://wa.me/2347042804483?text=Hi%20Mohammed!%20I%20saw%20your%20portfolio%20and%20I%27d%20like%20to%20hire%20you." target="_blank" class="btn-wa-big">
                 <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+            </a>
+            &nbsp;&nbsp;
+            <a href="https://t.me/globalhustler" target="_blank" class="btn-wa-big" style="background:#0088cc; margin-top:10px;">
+                <i class="fab fa-telegram"></i> Message on Telegram
             </a>
         </div>
         <form class="contact-form" action="https://formspree.io/f/mwvdywrg" method="POST">
             <input type="text" name="name" placeholder="Your Name" required>
             <input type="email" name="email" placeholder="Your Email" required>
-            <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+            <textarea name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
             <button type="submit" class="btn">Send Message</button>
         </form>
     </div>
@@ -256,6 +324,7 @@
 <footer>
     <div class="social-links">
         <a href="https://wa.me/2347042804483" target="_blank" class="whatsapp" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://t.me/globalhustler" target="_blank" class="telegram" title="Telegram"><i class="fab fa-telegram"></i></a>
         <a href="https://www.tiktok.com/@your_tiktok_username" target="_blank" class="tiktok" title="TikTok"><i class="fab fa-tiktok"></i></a>
     </div>
     <p>&copy; 2026 Mohammed Jamiu. All rights reserved.</p>
@@ -268,4 +337,4 @@
     }
 </script>
 </body>
-    </html>
+</html>
