@@ -3,338 +3,625 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mohammed Jamiu | Digital Content Strategist & Web Developer</title>
+    <title>EET — Mohammed Jamiu | Digital Content Strategist & Web Developer</title>
+    <meta name="description" content="Copywriting, Resume Writing, Web Development, SEO, AI Automation & Digital Products. I build. I sell. I trade.">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg-primary: #0f172a;
-            --bg-secondary: #1e293b;
-            --accent: #38bdf8;
-            --text-main: #f8fafc;
-            --text-muted: #94a3b8;
+            --teal: #0E7A70;
+            --teal-dark: #0A5C54;
+            --teal-deep: #084A44;
+            --teal-glow: rgba(14, 122, 112, 0.3);
+            --gold: #C9962C;
+            --gold-light: #E0B65C;
+            --gold-glow: rgba(201, 150, 44, 0.35);
+            --bg: #F3EFE4;
+            --bg-mid: #EDE8D9;
+            --card: #FFFFFF;
+            --card-2: #FBF8EF;
+            --ink: #14120D;
+            --ink-soft: #3C392E;
+            --muted: #6B6558;
+            --muted-2: #938D7C;
+            --border: rgba(14, 122, 112, 0.18);
+            --border-gold: rgba(201, 150, 44, 0.28);
+            --shadow-teal: 0 20px 50px -18px rgba(14, 122, 112, 0.35);
+            --shadow-gold: 0 20px 50px -18px rgba(201, 150, 44, 0.4);
+            --shadow-dark: 0 20px 45px -15px rgba(20, 18, 13, 0.22);
+            --font-display: 'Sora', sans-serif;
+            --font-body: 'Inter', sans-serif;
+            --ease: cubic-bezier(0.22, 1, 0.36, 1);
+            --ease-snap: cubic-bezier(0.34, 1.56, 0.64, 1);
         }
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', system-ui, sans-serif; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         html { scroll-behavior: smooth; }
-        body { background-color: var(--bg-primary); color: var(--text-main); line-height: 1.6; }
-        .container { max-width: 1100px; margin: 0 auto; padding: 80px 20px; }
-
-        /* HEADER */
-        header { display: flex; justify-content: space-between; align-items: center; padding: 20px 5%; position: fixed; width: 100%; top: 0; background: rgba(15,23,42,0.95); backdrop-filter: blur(10px); z-index: 100; border-bottom: 1px solid rgba(255,255,255,0.05); }
-        .logo { font-size: 24px; font-weight: 800; letter-spacing: 1px; }
-        .logo span { color: var(--accent); }
-        nav ul { display: flex; list-style: none; }
-        nav ul li { margin-left: 20px; }
-        nav ul li a { text-decoration: none; color: var(--text-muted); font-weight: 500; transition: color 0.3s; font-size: 14px; }
-        nav ul li a:hover { color: var(--accent); }
-        .hamburger { display: none; background: transparent; border: none; color: var(--text-main); font-size: 22px; cursor: pointer; }
-
-        /* HERO */
-        .hero-section { height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; padding: 0 20px; background: radial-gradient(circle at top right, rgba(56,189,248,0.12), transparent), radial-gradient(circle at bottom left, rgba(56,189,248,0.06), transparent); }
-        .hero-content h1 { font-size: 3.2rem; margin-bottom: 10px; }
-        .highlight { color: var(--accent); }
-        .hero-content h2 { font-size: 1.5rem; color: var(--text-muted); margin-bottom: 15px; font-weight: 400; }
-        .hero-content p { max-width: 600px; margin: 0 auto 20px; color: var(--text-muted); font-size: 1.05rem; line-height: 1.8; }
-        .hero-tags { display: flex; justify-content: center; gap: 8px; flex-wrap: wrap; margin-bottom: 30px; }
-        .hero-tag { background: rgba(56,189,248,0.1); color: var(--accent); padding: 5px 13px; border-radius: 20px; font-size: 12px; border: 1px solid rgba(56,189,248,0.2); }
-
-        .btn { display: inline-block; background-color: var(--accent); color: var(--bg-primary); padding: 12px 28px; border-radius: 30px; text-decoration: none; font-weight: 700; border: none; cursor: pointer; transition: transform 0.2s, box-shadow 0.2s; font-size: 15px; }
-        .btn:hover { transform: translateY(-2px); box-shadow: 0 5px 20px rgba(56,189,248,0.4); }
-        .btn-whatsapp { background: #25D366; color: #fff; margin-left: 12px; }
-        .btn-whatsapp:hover { box-shadow: 0 5px 20px rgba(37,211,102,0.4); }
-
-        /* SECTION TITLES */
-        h2 { font-size: 2.2rem; text-align: center; margin-bottom: 40px; position: relative; }
-        h2::after { content: ''; display: block; width: 50px; height: 4px; background: var(--accent); margin: 10px auto 0; border-radius: 2px; }
-
-        /* ABOUT */
-        .about-section { background-color: var(--bg-secondary); }
-        .about-text { max-width: 800px; margin: 0 auto; text-align: center; font-size: 1.05rem; color: var(--text-muted); line-height: 1.8; }
-        .skills { margin-top: 40px; }
-        .skills h3 { color: var(--text-main); margin-bottom: 20px; text-align: center; }
-        .skill-tags { display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; }
-        .skill-tags span { background: rgba(56,189,248,0.1); color: var(--accent); padding: 8px 18px; border-radius: 20px; font-weight: 500; border: 1px solid rgba(56,189,248,0.2); font-size: 13px; }
-
-        /* SERVICES */
-        .services-section { background-color: var(--bg-primary); }
-        .services-intro { max-width: 700px; margin: -20px auto 40px; text-align: center; color: var(--text-muted); font-size: 1.05rem; line-height: 1.8; font-style: italic; }
-        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); gap: 20px; }
-        .service-card { background: var(--bg-secondary); border-radius: 12px; padding: 25px; border: 1px solid rgba(56,189,248,0.1); transition: transform 0.3s, box-shadow 0.3s; }
-        .service-card:hover { transform: translateY(-5px); box-shadow: 0 10px 25px rgba(56,189,248,0.15); }
-        .service-icon { font-size: 2rem; margin-bottom: 15px; }
-        .service-card h3 { font-size: 1.05rem; color: var(--accent); margin-bottom: 10px; }
-        .service-card p { color: var(--text-muted); font-size: 0.9rem; line-height: 1.7; }
-
-        /* PROJECTS */
-        .projects-section { background-color: var(--bg-secondary); }
-        .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-        .project-card { background: var(--bg-primary); border-radius: 12px; overflow: hidden; border: 1px solid rgba(255,255,255,0.06); transition: transform 0.3s, box-shadow 0.3s; }
-        .project-card:hover { transform: translateY(-6px); box-shadow: 0 12px 30px rgba(56,189,248,0.15); }
-        .project-img img { width: 100%; height: 200px; object-fit: cover; }
-        .project-badge { display: inline-block; background: var(--accent); color: var(--bg-primary); font-size: 11px; font-weight: 700; padding: 3px 10px; border-radius: 20px; margin-bottom: 10px; text-transform: uppercase; }
-        .project-info { padding: 25px; }
-        .project-info h3 { margin-bottom: 8px; font-size: 1.2rem; }
-        .project-info p { color: var(--text-muted); margin-bottom: 20px; font-size: 0.92rem; line-height: 1.7; }
-        .project-link { color: var(--accent); text-decoration: none; font-weight: 600; font-size: 14px; }
-        .project-link:hover { text-decoration: underline; }
-
-        /* CONTACT */
-        .contact-section { background-color: var(--bg-primary); }
-        .contact-sub { text-align: center; color: var(--text-muted); margin-top: -30px; margin-bottom: 40px; }
-        .whatsapp-banner { max-width: 600px; margin: 0 auto 40px; background: rgba(37,211,102,0.1); border: 1px solid rgba(37,211,102,0.3); border-radius: 12px; padding: 20px 25px; text-align: center; }
-        .whatsapp-banner p { color: #94a3b8; margin-bottom: 15px; font-size: 15px; }
-        .btn-wa-big { display: inline-flex; align-items: center; gap: 8px; background: #25D366; color: #fff; padding: 13px 28px; border-radius: 30px; text-decoration: none; font-weight: 700; font-size: 15px; transition: transform 0.2s, box-shadow 0.2s; }
-        .btn-wa-big:hover { transform: translateY(-2px); box-shadow: 0 5px 20px rgba(37,211,102,0.4); }
-        .contact-form { max-width: 600px; margin: 0 auto; display: flex; flex-direction: column; gap: 20px; }
-        .contact-form input, .contact-form textarea { width: 100%; padding: 15px; background: var(--bg-secondary); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; color: white; font-size: 1rem; outline: none; transition: border-color 0.3s; }
-        .contact-form input:focus, .contact-form textarea:focus { border-color: var(--accent); }
-        .contact-form .btn { align-self: center; }
-
-        /* FOOTER */
-        footer { text-align: center; padding: 40px 20px; color: var(--text-muted); border-top: 1px solid rgba(255,255,255,0.05); }
-        .social-links { margin-bottom: 15px; }
-        .social-links a { color: var(--text-muted); font-size: 1.5rem; margin: 0 12px; transition: color 0.3s; }
-        .social-links a.whatsapp:hover { color: #25D366; }
-        .social-links a.tiktok:hover { color: #ff0050; }
-        .social-links a.telegram:hover { color: #0088cc; }
-        .btn-telegram { background: #0088cc; color: #fff; margin-left: 12px; }
-        .btn-telegram:hover { box-shadow: 0 5px 20px rgba(0,136,204,0.4); }
-
-        /* MOBILE */
-        @media (max-width: 768px) {
-            .hamburger { display: block; }
-            #main-nav { display: none; position: fixed; top: 70px; left: 0; width: 100%; background: rgba(15,23,42,0.98); padding: 20px 5%; z-index: 99; border-bottom: 1px solid rgba(255,255,255,0.05); }
-            #main-nav.open { display: block; }
-            #main-nav ul { flex-direction: column; }
-            #main-nav ul li { margin: 12px 0; }
-            .hero-content h1 { font-size: 2rem; }
-            .hero-content h2 { font-size: 1.1rem; }
-            .btn-whatsapp { margin-left: 0; margin-top: 10px; display: block; text-align: center; }
+        body {
+            font-family: var(--font-body);
+            background: var(--bg);
+            color: var(--ink);
+            overflow-x: hidden;
+            min-height: 100vh;
+            -webkit-font-smoothing: antialiased;
+            background-image:
+                radial-gradient(ellipse 80% 50% at 20% 0%, rgba(14, 122, 112, 0.12), transparent 60%),
+                radial-gradient(ellipse 80% 50% at 80% 100%, rgba(201, 150, 44, 0.07), transparent 60%);
+            background-attachment: fixed;
         }
+        ::selection { background: var(--teal); color: #fff; }
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: var(--bg); }
+        ::-webkit-scrollbar-thumb { background: var(--teal-dark); border-radius: 3px; }
+
+        .bg-grid {
+            position: fixed; inset: 0; z-index: 0; pointer-events: none;
+            background-image:
+                linear-gradient(rgba(14, 122, 112, 0.045) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(14, 122, 112, 0.045) 1px, transparent 1px);
+            background-size: 60px 60px;
+            mask-image: radial-gradient(ellipse 100% 80% at 50% 50%, black, transparent 90%);
+            -webkit-mask-image: radial-gradient(ellipse 100% 80% at 50% 50%, black, transparent 90%);
+            animation: gridDrift 40s linear infinite;
+        }
+        @keyframes gridDrift { 0% { transform: translate(0, 0); } 100% { transform: translate(60px, 60px); } }
+        @media (prefers-reduced-motion: reduce) { .bg-grid, .orb { animation: none !important; } }
+
+        .orb {
+            position: fixed; border-radius: 50%; filter: blur(90px);
+            z-index: 0; pointer-events: none; opacity: 0.22;
+            animation: orbFloat 18s ease-in-out infinite;
+        }
+        .orb-1 { width: 400px; height: 400px; background: var(--teal); top: -100px; right: -100px; animation-delay: 0s; }
+        .orb-2 { width: 350px; height: 350px; background: var(--gold); bottom: -80px; left: -80px; animation-delay: -6s; opacity: 0.16; }
+        .orb-3 { width: 300px; height: 300px; background: var(--ink); top: 40%; left: 30%; animation-delay: -12s; opacity: 0.05; }
+        @keyframes orbFloat {
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            33% { transform: translate(40px, -30px) scale(1.1); }
+            66% { transform: translate(-30px, 40px) scale(0.95); }
+        }
+
+        .app { position: relative; z-index: 5; min-height: 100vh; display: flex; flex-direction: column; }
+
+        header.topbar {
+            position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+            padding: 16px 5%;
+            display: flex; align-items: center; justify-content: space-between;
+            background: rgba(243, 239, 228, 0.72);
+            backdrop-filter: blur(24px) saturate(160%);
+            -webkit-backdrop-filter: blur(24px) saturate(160%);
+            border-bottom: 1px solid rgba(14, 122, 112, 0.12);
+            transition: all 0.4s var(--ease);
+        }
+        header.topbar.scrolled { padding: 12px 5%; background: rgba(243, 239, 228, 0.92); box-shadow: 0 8px 30px -12px rgba(20,18,13,0.18); }
+
+        .brand { display: flex; align-items: center; gap: 12px; cursor: pointer; user-select: none; }
+        .brand-mark {
+            width: 42px; height: 42px; border-radius: 12px;
+            background: linear-gradient(135deg, var(--teal), var(--teal-deep));
+            display: grid; place-items: center;
+            font-family: var(--font-display); font-weight: 800; font-size: 18px;
+            color: var(--ink);
+            box-shadow: 0 0 24px var(--teal-glow), inset 0 0 12px rgba(255,255,255,0.2);
+            transition: transform 0.4s var(--ease-snap);
+        }
+        .brand:hover .brand-mark { transform: rotate(-8deg) scale(1.08); }
+        .brand-text { display: flex; flex-direction: column; line-height: 1.1; }
+        .brand-name { font-family: var(--font-display); font-weight: 700; font-size: 18px; letter-spacing: 0.5px; }
+        .brand-name span { color: var(--teal); }
+        .brand-tag { font-size: 10px; color: var(--gold); letter-spacing: 2px; text-transform: uppercase; font-weight: 600; margin-top: 3px; }
+
+        /* unified icon-dropdown menu (same component, desktop + mobile) */
+        .menu-wrap { position: relative; }
+        .menu-btn {
+            display: flex; align-items: center; gap: 10px; cursor: pointer;
+            background: linear-gradient(135deg, var(--teal), var(--teal-deep)); border: none;
+            padding: 11px 20px; border-radius: 30px;
+            font-family: var(--font-body); font-weight: 700; font-size: 14px; color: #fff;
+            transition: all 0.3s var(--ease); box-shadow: 0 10px 26px -10px var(--teal-glow);
+        }
+        .menu-btn:hover { transform: translateY(-2px); box-shadow: 0 14px 32px -10px var(--teal-glow); }
+        .menu-btn i.grid-ic { color: #fff; font-size: 14px; }
+        .menu-btn i.chev { font-size: 10px; color: rgba(255,255,255,0.8); transition: transform 0.3s var(--ease); }
+        .menu-btn.open i.chev { transform: rotate(180deg); }
+
+        .menu-dropdown {
+            position: absolute; top: calc(100% + 14px); right: 0; min-width: 240px;
+            background: var(--card); border-radius: 18px; padding: 10px;
+            border: 1px solid var(--border); box-shadow: 0 25px 60px -15px rgba(20,18,13,0.25);
+            opacity: 0; visibility: hidden; transform: translateY(-10px) scale(0.98);
+            transition: all 0.25s var(--ease-snap); z-index: 210;
+        }
+        .menu-dropdown.open { opacity: 1; visibility: visible; transform: translateY(0) scale(1); }
+        .menu-item {
+            display: flex; align-items: center; gap: 13px; width: 100%; text-align: left;
+            background: none; border: none; text-decoration: none;
+            padding: 12px 13px; border-radius: 12px;
+            font-family: var(--font-body); font-size: 14.5px; font-weight: 600; color: var(--ink-soft);
+            cursor: pointer; transition: all 0.2s var(--ease);
+        }
+        .menu-item:hover { background: rgba(14, 122, 112, 0.08); color: var(--teal); transform: translateX(3px); }
+        .menu-item.active { color: var(--teal); background: rgba(14, 122, 112, 0.06); }
+        .menu-item .ico {
+            width: 32px; height: 32px; border-radius: 9px; background: var(--bg-mid);
+            display: flex; align-items: center; justify-content: center; font-size: 13.5px;
+            color: var(--ink); flex: 0 0 auto; transition: all 0.2s;
+        }
+        .menu-item.active .ico, .menu-item:hover .ico { background: var(--teal); color: #fff; }
+        .menu-item.store { border-top: 1px solid var(--border); margin-top: 6px; padding-top: 13px; }
+        .menu-item.store .ico { background: linear-gradient(135deg, var(--gold), var(--gold-light)); color: var(--ink); }
+        .menu-item.store:hover { color: var(--gold); }
+        .menu-item.store:hover .ico { background: var(--gold); color: var(--ink); }
+
+        .view-container { flex: 1; position: relative; padding-top: 84px; }
+        .view { display: none; animation: viewIn 0.7s var(--ease) both; padding: 50px 5% 80px; max-width: 1200px; margin: 0 auto; width: 100%; }
+        .view.active { display: block; }
+        @keyframes viewIn {
+            from { opacity: 0; transform: translateY(24px) scale(0.985); filter: blur(6px); }
+            to { opacity: 1; transform: translateY(0) scale(1); filter: blur(0); }
+        }
+
+        .eyebrow {
+            display: inline-flex; align-items: center; gap: 8px;
+            font-family: var(--font-display); font-size: 11px; font-weight: 700;
+            letter-spacing: 2.5px; text-transform: uppercase;
+            color: var(--gold); padding: 7px 16px;
+            border: 1px solid var(--border-gold); border-radius: 30px;
+            background: rgba(212, 175, 55, 0.06);
+            margin-bottom: 22px;
+            animation: fadeUp 0.8s 0.1s var(--ease) both;
+        }
+        .eyebrow::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--gold); box-shadow: 0 0 10px var(--gold-glow); animation: pulseDot 2s infinite; }
+        @keyframes pulseDot { 0%, 100% { opacity: 1; transform: scale(1); } 50% { opacity: 0.5; transform: scale(0.7); } }
+
+        .view-title { font-family: var(--font-display); font-weight: 700; font-size: clamp(2rem, 5vw, 3.4rem); line-height: 1.05; letter-spacing: -1px; margin-bottom: 18px; animation: fadeUp 0.8s 0.15s var(--ease) both; }
+        .view-sub { color: var(--muted); font-size: 1.05rem; line-height: 1.8; max-width: 640px; margin-bottom: 48px; animation: fadeUp 0.8s 0.25s var(--ease) both; }
+        .accent-teal { color: var(--teal); }
+        .accent-gold { color: var(--gold); }
+        @keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+
+        .btn {
+            display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+            font-family: var(--font-body); font-weight: 600; font-size: 15px;
+            padding: 15px 30px; border-radius: 14px; border: none; cursor: pointer;
+            text-decoration: none; transition: all 0.35s var(--ease-snap);
+            position: relative; overflow: hidden; white-space: nowrap;
+        }
+        .btn-primary { background: linear-gradient(135deg, var(--teal), var(--teal-deep)); color: var(--ink); box-shadow: 0 10px 30px -10px var(--teal-glow); }
+        .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 18px 40px -10px var(--teal-glow); }
+        .btn-gold { background: linear-gradient(135deg, var(--gold), var(--gold-light)); color: var(--ink); box-shadow: 0 10px 30px -10px var(--gold-glow); }
+        .btn-gold:hover { transform: translateY(-3px) scale(1.02); box-shadow: 0 18px 40px -10px var(--gold-glow); }
+        .btn-ghost { background: transparent; color: var(--ink); border: 1px solid var(--border); }
+        .btn-ghost:hover { border-color: var(--teal); color: var(--teal); background: rgba(14, 122, 112, 0.06); transform: translateY(-3px); }
+
+        .hero-wrap { display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 60px; align-items: center; min-height: calc(100vh - 200px); padding: 30px 0; }
+        @media (max-width: 950px) { .hero-wrap { grid-template-columns: 1fr; gap: 50px; text-align: center; min-height: auto; } }
+        .hero-title { font-family: var(--font-display); font-weight: 700; font-size: clamp(2.4rem, 5.5vw, 4.2rem); line-height: 1.02; letter-spacing: -1.5px; margin-bottom: 22px; animation: fadeUp 0.9s 0.2s var(--ease) both; }
+        .hero-title .line2 { display: block; margin-top: 6px; }
+        .hero-desc { color: var(--muted); font-size: 1.08rem; line-height: 1.85; max-width: 560px; margin-bottom: 32px; animation: fadeUp 0.9s 0.3s var(--ease) both; }
+        @media (max-width: 950px) { .hero-desc { margin-left: auto; margin-right: auto; } }
+        .hero-tags { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 36px; animation: fadeUp 0.9s 0.4s var(--ease) both; }
+        @media (max-width: 950px) { .hero-tags { justify-content: center; } }
+        .pill {
+            font-size: 12.5px; font-weight: 600; padding: 8px 16px; border-radius: 30px; letter-spacing: 0.2px;
+            background: rgba(14, 122, 112, 0.08); color: var(--teal); border: 1px solid var(--border);
+            transition: all 0.3s var(--ease); cursor: default;
+        }
+        .pill:hover { transform: translateY(-2px); background: rgba(14, 122, 112, 0.15); }
+        .pill.gold { background: rgba(212,175,55,0.08); color: var(--gold); border-color: var(--border-gold); }
+        .pill.gold:hover { background: rgba(212,175,55,0.16); }
+        .hero-cta { display: flex; gap: 14px; flex-wrap: wrap; animation: fadeUp 0.9s 0.5s var(--ease) both; }
+        @media (max-width: 950px) { .hero-cta { justify-content: center; } }
+
+        .hero-visual { position: relative; display: flex; justify-content: center; align-items: center; animation: fadeUp 1s 0.4s var(--ease) both; }
+        .visual-card {
+            width: 100%; max-width: 380px;
+            background: linear-gradient(155deg, var(--card), var(--card-2));
+            border: 1px solid var(--border); border-radius: 24px;
+            padding: 30px; position: relative;
+            box-shadow: var(--shadow-dark), 0 0 60px -20px var(--teal-glow);
+            animation: floatCard 6s ease-in-out infinite;
+        }
+        @keyframes floatCard { 0%, 100% { transform: translateY(0) rotate(-1deg); } 50% { transform: translateY(-14px) rotate(1deg); } }
+        .visual-card::before {
+            content: ''; position: absolute; inset: -1px; border-radius: 24px;
+            padding: 1px; background: linear-gradient(135deg, var(--teal), transparent 40%, var(--gold));
+            -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+            -webkit-mask-composite: xor; mask-composite: exclude;
+            opacity: 0.6;
+        }
+        .card-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 22px; }
+        .card-avatar {
+            width: 48px; height: 48px; border-radius: 14px;
+            background: linear-gradient(135deg, var(--teal), var(--teal-deep));
+            display: grid; place-items: center; font-family: var(--font-display);
+            font-weight: 800; color: var(--ink); font-size: 20px;
+            box-shadow: 0 0 20px var(--teal-glow);
+        }
+        .card-status {
+            font-size: 10.5px; font-weight: 700; letter-spacing: 1.2px;
+            color: var(--teal); padding: 6px 12px; border-radius: 20px;
+            background: rgba(14, 122, 112, 0.1); border: 1px solid var(--border);
+            display: inline-flex; align-items: center; gap: 6px;
+        }
+        .card-status::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--teal); box-shadow: 0 0 8px var(--teal); animation: pulseDot 1.8s infinite; }
+        .card-title { font-family: var(--font-display); font-weight: 700; font-size: 1.25rem; margin-bottom: 4px; }
+        .card-sub { color: var(--muted); font-size: 0.82rem; margin-bottom: 22px; }
+        .mini-stats { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; margin-bottom: 22px; }
+        .mini-stat { background: rgba(14, 122, 112, 0.05); border: 1px solid var(--border); border-radius: 12px; padding: 12px 8px; text-align: center; transition: all 0.3s; }
+        .mini-stat:hover { border-color: var(--teal); transform: translateY(-2px); }
+        .mini-stat .num { font-family: var(--font-display); font-weight: 700; font-size: 1.05rem; color: var(--teal); }
+        .mini-stat .lbl { font-size: 9.5px; color: var(--muted-2); letter-spacing: 1px; text-transform: uppercase; margin-top: 3px; }
+        .card-bar { height: 6px; border-radius: 4px; background: rgba(255,255,255,0.06); overflow: hidden; margin-bottom: 8px; }
+        .card-bar-fill { height: 100%; border-radius: 4px; width: 0; background: linear-gradient(90deg, var(--teal), var(--gold)); animation: barFill 2.2s 1s var(--ease) forwards; }
+        @keyframes barFill { to { width: 82%; } }
+        .card-bar-label { display: flex; justify-content: space-between; font-size: 11px; color: var(--muted-2); }
+
+        .store-strip {
+            margin-top: 60px;
+            background: linear-gradient(120deg, rgba(212,175,55,0.1), rgba(14, 122, 112, 0.06));
+            border: 1px solid var(--border-gold); border-radius: 22px;
+            padding: 28px 32px; display: flex; align-items: center; justify-content: space-between;
+            gap: 24px; flex-wrap: wrap;
+            position: relative; overflow: hidden;
+            animation: fadeUp 1s 0.6s var(--ease) both;
+            transition: all 0.4s var(--ease);
+        }
+        .store-strip:hover { transform: translateY(-4px); box-shadow: var(--shadow-gold); border-color: var(--gold); }
+        .store-strip::before {
+            content: ''; position: absolute; top: -50%; right: -10%; width: 300px; height: 300px;
+            background: radial-gradient(circle, var(--gold-glow), transparent 70%);
+            pointer-events: none;
+        }
+        .store-strip-text { position: relative; z-index: 1; }
+        .store-strip-text h3 { font-family: var(--font-display); font-weight: 700; font-size: 1.2rem; margin-bottom: 6px; }
+        .store-strip-text p { color: var(--muted); font-size: 0.92rem; }
+        .store-strip .btn { position: relative; z-index: 1; }
+
+        /* ============ ABOUT ============ */
+        .about-grid { display: grid; grid-template-columns: 1fr; gap: 28px; max-width: 760px; }
+        .about-text p { color: var(--muted); font-size: 1.02rem; line-height: 1.9; margin-bottom: 18px; animation: fadeUp 0.8s var(--ease) both; }
+        .about-text strong { color: var(--ink); }
+        .skill-cloud { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 30px; animation: fadeUp 0.8s 0.2s var(--ease) both; }
+
+        /* ============ CARD GRIDS (services / products / projects) ============ */
+        .card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); gap: 20px; }
+        .feature-card {
+            background: linear-gradient(155deg, var(--card), var(--card-2));
+            border: 1px solid var(--border); border-radius: 18px; padding: 28px;
+            transition: all 0.4s var(--ease); position: relative; overflow: hidden;
+            animation: fadeUp 0.7s var(--ease) both;
+        }
+        .feature-card:hover { transform: translateY(-6px); border-color: var(--teal); box-shadow: var(--shadow-teal); }
+        .feature-card .ic { font-size: 1.8rem; margin-bottom: 16px; }
+        .feature-card h3 { font-family: var(--font-display); font-size: 1.08rem; color: var(--teal); margin-bottom: 10px; font-weight: 600; }
+        .feature-card p { color: var(--muted); font-size: 0.9rem; line-height: 1.75; }
+
+        .product-card { border-color: var(--border-gold); display: flex; flex-direction: column; }
+        .product-card:hover { border-color: var(--gold); box-shadow: var(--shadow-gold); }
+        .product-badge { display: inline-block; background: linear-gradient(135deg, var(--gold), var(--gold-light)); color: var(--ink); font-size: 10px; font-weight: 800; padding: 5px 13px; border-radius: 20px; margin-bottom: 14px; text-transform: uppercase; letter-spacing: 0.5px; width: fit-content; }
+        .product-card h3 { color: var(--ink); font-family: var(--font-display); font-size: 1.12rem; margin-bottom: 10px; }
+        .product-card p { color: var(--muted); font-size: 0.92rem; line-height: 1.7; margin-bottom: 20px; flex-grow: 1; }
+        .product-link { display: inline-flex; align-items: center; gap: 8px; color: var(--gold); font-weight: 700; font-size: 13.5px; text-decoration: none; }
+        .product-link:hover { gap: 12px; }
+
+        .project-feature { max-width: 440px; margin: 0 auto; }
+        .project-top { height: 130px; border-radius: 12px; background: linear-gradient(135deg, rgba(14, 122, 112, 0.15), rgba(212,175,55,0.1)); display: flex; align-items: center; justify-content: center; font-size: 2.8rem; margin-bottom: 20px; }
+        .project-badge { display: inline-block; background: rgba(14, 122, 112, 0.12); color: var(--teal); border: 1px solid var(--border); font-size: 10.5px; font-weight: 700; padding: 5px 13px; border-radius: 20px; margin-bottom: 14px; text-transform: uppercase; letter-spacing: 0.5px; }
+
+        /* ============ CONTACT ============ */
+        .contact-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 50px; align-items: start; }
+        @media (max-width: 860px) { .contact-grid { grid-template-columns: 1fr; } }
+        .contact-side h3 { font-family: var(--font-display); font-size: 1.1rem; margin-bottom: 8px; }
+        .contact-side p { color: var(--muted); font-size: 0.92rem; margin-bottom: 20px; }
+        .contact-side .btn { width: 100%; margin-bottom: 12px; }
+        .contact-form { display: flex; flex-direction: column; gap: 16px; }
+        .contact-form input, .contact-form textarea {
+            padding: 15px 17px; border-radius: 12px; border: 1px solid var(--border);
+            background: rgba(20,18,13,0.035); color: var(--ink); font-family: inherit; font-size: 14.5px;
+            outline: none; transition: border-color 0.3s;
+        }
+        .contact-form input:focus, .contact-form textarea:focus { border-color: var(--teal); }
+        .contact-form input::placeholder, .contact-form textarea::placeholder { color: var(--muted-2); }
+
+        footer.site-footer { margin-top: 60px; padding-top: 30px; border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; }
+        .social-row { display: flex; gap: 18px; }
+        .social-row a { font-size: 1.15rem; color: var(--muted); transition: color 0.3s, transform 0.3s; }
+        .social-row a:hover { color: var(--teal); transform: translateY(-3px); }
+        .copy { font-size: 12px; color: var(--muted-2); }
+
+        @media (max-width: 860px) {
+            .menu-btn span.label { display: none; }
+            .menu-btn { padding: 12px 14px; }
+        }
+
+        #toast {
+            position: fixed; left: 50%; bottom: 30px; transform: translateX(-50%) translateY(16px);
+            background: var(--ink); color: var(--bg); padding: 13px 22px; border-radius: 30px;
+            font-family: var(--font-body); font-weight: 600; font-size: 13.5px;
+            box-shadow: var(--shadow-dark); z-index: 300; opacity: 0; pointer-events: none;
+            transition: opacity 0.3s var(--ease), transform 0.3s var(--ease); max-width: 88%; text-align: center;
+        }
+        #toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+
+        .exit-home {
+            position: fixed; bottom: 26px; left: 26px; z-index: 90;
+            display: none; align-items: center; gap: 9px;
+            background: rgba(243, 239, 228, 0.9); backdrop-filter: blur(16px);
+            border: 1px solid var(--border); color: var(--ink);
+            padding: 13px 20px 13px 16px; border-radius: 30px; cursor: pointer;
+            font-family: var(--font-body); font-weight: 600; font-size: 13.5px;
+            box-shadow: var(--shadow-dark); transition: all 0.3s var(--ease-snap);
+        }
+        .exit-home.show { display: flex; animation: fadeUp 0.4s var(--ease) both; }
+        .exit-home:hover { border-color: var(--teal); color: var(--teal); transform: translateY(-3px); box-shadow: var(--shadow-teal); }
+        .exit-home i { font-size: 15px; }
     </style>
 </head>
 <body>
 
-<!-- HEADER -->
-<header>
-    <div class="logo">MJ<span>.DEV</span></div>
-    <nav id="main-nav">
-        <ul>
-            <li><a href="#hero">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-    <button class="hamburger" onclick="toggleMenu()"><i class="fas fa-bars"></i></button>
-</header>
+<div class="bg-grid"></div>
+<div class="orb orb-1"></div>
+<div class="orb orb-2"></div>
+<div class="orb orb-3"></div>
 
-<!-- HERO -->
-<section id="hero" class="hero-section">
-    <div class="hero-content">
-        <h1>Hi, I'm <span class="highlight">Mohammed Jamiu</span></h1>
-        <h2>Digital Content Strategist & Web Developer</h2>
-        <p>I build websites, write copy that converts, and create content strategies that attract the right audience — so your brand grows and your business wins.</p>
-        <div class="hero-tags">
-            <span class="hero-tag">🌐 Web Development</span>
-            <span class="hero-tag">✍️ Copywriting</span>
-            <span class="hero-tag">📈 SEO</span>
-            <span class="hero-tag">📣 Digital Marketing</span>
-            <span class="hero-tag">🧠 Content Strategy</span>
-            <span class="hero-tag">📄 Resume Writing</span>
-            <span class="hero-tag">🐍 Python</span>
-        </div>
-        <a href="#services" class="btn">View My Services</a>
-        <a href="https://wa.me/2347042804483" target="_blank" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> Hire Me</a>
-    </div>
-</section>
-
-<!-- ABOUT -->
-<section id="about" class="about-section">
-    <div class="container">
-        <h2>About Me</h2>
-        <div class="about-text">
-            <p>I'm Mohammed Jamiu — a Digital Content Strategist, Web Developer, and Resume Writer based in Ilorin, Nigeria. I help individuals and businesses grow their presence online by combining two powerful forces: strategic content and clean, modern web development.</p>
-            <p style="margin-top:15px">Whether you need a website that converts visitors into clients, copy that compels people to take action, an SEO strategy that drives organic traffic, or a resume that lands interviews — I bring the full package. I believe great results come from understanding your audience deeply and delivering content that speaks directly to them.</p>
-            <p style="margin-top:15px">I also study forex trading, with a long-term goal of combining technology and financial markets to build powerful data-driven tools.</p>
-            <div class="skills">
-                <h3>My Skills</h3>
-                <div class="skill-tags">
-                    <span>HTML5</span>
-                    <span>CSS3</span>
-                    <span>JavaScript</span>
-                    <span>Python</span>
-                    <span>Copywriting</span>
-                    <span>SEO</span>
-                    <span>Digital Marketing</span>
-                    <span>Content Strategy</span>
-                    <span>Content Automation</span>
-                    <span>Resume Writing</span>
-                    <span>ATS Optimization</span>
-                    <span>API Integration</span>
-                    <span>Forex Trading</span>
-                </div>
+<div class="app">
+    <header class="topbar" id="topbar">
+        <div class="brand" data-view="home">
+            <div class="brand-mark">E</div>
+            <div class="brand-text">
+                <div class="brand-name">EET<span>.DEV</span></div>
+                <div class="brand-tag">Build · Sell · Trade</div>
             </div>
         </div>
-    </div>
-</section>
-
-<!-- SERVICES -->
-<section id="services" class="services-section">
-    <div class="container">
-        <h2>My Services</h2>
-        <p class="services-intro">"I help businesses and individuals grow online through strategic content, persuasive copy, and clean web development. Here is what I offer:"</p>
-        <div class="services-grid">
-
-            <div class="service-card">
-                <div class="service-icon">✍️</div>
-                <h3>Copywriting & Email Sequences</h3>
-                <p>I write persuasive copy that turns readers into buyers — from sales pages and landing pages to email sequences that nurture leads and drive conversions.</p>
+        <div class="menu-wrap">
+            <button class="menu-btn" id="menuBtn" aria-haspopup="true" aria-expanded="false">
+                <i class="fas fa-bars grid-ic"></i> <span class="label" id="menuBtnLabel">Home</span> <i class="fas fa-chevron-down chev"></i>
+            </button>
+            <div class="menu-dropdown" id="menuDropdown" role="menu">
+                <a href="#" class="menu-item active" data-view="home" role="menuitem"><span class="ico"><i class="fas fa-house"></i></span> Home</a>
+                <a href="#" class="menu-item" data-view="about" role="menuitem"><span class="ico"><i class="fas fa-user"></i></span> About</a>
+                <a href="#" class="menu-item" data-view="services" role="menuitem"><span class="ico"><i class="fas fa-briefcase"></i></span> Services</a>
+                <a href="#" class="menu-item" data-view="products" role="menuitem"><span class="ico"><i class="fas fa-box-open"></i></span> Products</a>
+                <a href="#" class="menu-item" data-view="projects" role="menuitem"><span class="ico"><i class="fas fa-diagram-project"></i></span> Projects</a>
+                <a href="#" class="menu-item" data-view="contact" role="menuitem"><span class="ico"><i class="fas fa-envelope"></i></span> Contact</a>
+                <a href="https://selar.com/4149j4d447" target="_blank" class="menu-item store" role="menuitem"><span class="ico"><i class="fas fa-store"></i></span> Store <i class="fas fa-arrow-up-right-from-square" style="font-size:10px; margin-left:auto; opacity:.5;"></i></a>
             </div>
-
-            <div class="service-card">
-                <div class="service-icon">🔍</div>
-                <h3>SEO Content Optimization</h3>
-                <p>I research keywords people are actually searching for, optimize your content to rank higher on search engines, and write meta descriptions and headlines that get clicks.</p>
-            </div>
-
-            <div class="service-card">
-                <div class="service-icon">🧠</div>
-                <h3>Digital Content Strategy</h3>
-                <p>I create content plans that attract the right audience, plan and execute social media campaigns, and turn followers into paying customers through strategic positioning.</p>
-            </div>
-
-            <div class="service-card">
-                <div class="service-icon">⚡</div>
-                <h3>AI-Powered Content Generation</h3>
-                <p>I produce high-quality content at scale — 30 social posts, 5 blogs, or a full email sequence — combining AI efficiency with human creativity and strategy for faster turnarounds.</p>
-            </div>
-
-            <div class="service-card">
-                <div class="service-icon">🤖</div>
-                <h3>Content Automation Systems</h3>
-                <p>I build workflows and systems that generate consistent content on autopilot — saving clients hours of manual work while maintaining quality and brand voice.</p>
-            </div>
-
-            <div class="service-card">
-                <div class="service-icon">🎯</div>
-                <h3>ATS-Friendly Resume Writing</h3>
-                <p>I craft resumes with industry keywords that pass automatic hiring filters, powerful summaries that highlight your achievements, and impact-driven bullet points that impress.</p>
-            </div>
-
-            <div class="service-card">
-                <div class="service-icon">✨</div>
-                <h3>Professional CV Formatting</h3>
-                <p>I structure your experience into a clean, modern, readable layout with action-oriented language and custom revisions until your CV is completely polished and ready to send.</p>
-            </div>
-
-            <div class="service-card">
-                <div class="service-icon">🌐</div>
-                <h3>Website Development</h3>
-                <p>I build clean, responsive, mobile-friendly websites for personal portfolios, businesses, and landing pages — with real API integrations and professional design.</p>
-            </div>
-
         </div>
-    </div>
-</section>
+    </header>
 
-<!-- PROJECTS -->
-<section id="projects" class="projects-section">
-    <div class="container">
-        <h2>Featured Projects</h2>
-        <div class="projects-grid">
+    <div class="view-container">
 
-            <div class="project-card">
-                <div class="project-img">
-                    <img src="https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=600&q=80" alt="CineVault">
+        <!-- HOME -->
+        <section class="view active" id="view-home">
+            <div class="hero-wrap">
+                <div>
+                    <div class="eyebrow"><i class="fas fa-location-dot" style="font-size:9px;"></i> Ilorin, Nigeria</div>
+                    <h1 class="hero-title">Hi, I'm <span class="accent-teal">Mohammed Jamiu</span><span class="line2">Digital Content Strategist</span></h1>
+                    <p class="hero-desc">I help individuals and businesses grow online through <span class="accent-gold">copywriting, SEO, web development, and AI-powered content</span> — so your brand gets seen, trusted, and paid.</p>
+                    <div class="hero-tags">
+                        <span class="pill">✍️ Copywriting</span>
+                        <span class="pill">📄 Resume Writing</span>
+                        <span class="pill">💻 Web Development</span>
+                        <span class="pill">🔍 SEO</span>
+                        <span class="pill gold">📦 Digital Products</span>
+                        <span class="pill gold">🤖 AI Automation</span>
+                    </div>
+                    <div class="hero-cta">
+                        <button class="btn btn-primary" data-view="services">View My Services</button>
+                        <a href="https://wa.me/2347060480170" target="_blank" class="btn btn-ghost"><i class="fab fa-whatsapp"></i> Hire Me</a>
+                    </div>
                 </div>
-                <div class="project-info">
-                    <span class="project-badge">Live Project</span>
-                    <h3>CineVault</h3>
-                    <p>A Netflix-style movie discovery web app with real posters, live ratings, trailers and search — connected to a live movie database API. Demonstrates full API integration and responsive UI design.</p>
-                    <a href="#" class="project-link">View Project <i class="fas fa-external-link-alt"></i></a>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <div class="project-img">
-                    <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=600&q=80" alt="FXLearn">
-                </div>
-                <div class="project-info">
-                    <span class="project-badge">Content + Web</span>
-                    <h3>FXLearn</h3>
-                    <p>A complete forex trading education platform — combining web development with structured content strategy. Covers beginner to intermediate topics including risk management, market psychology, and technical analysis.</p>
-                    <a href="#" class="project-link">View Project <i class="fas fa-external-link-alt"></i></a>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <div class="project-img">
-                    <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=600&q=80" alt="Content Strategy">
-                </div>
-                <div class="project-info">
-                    <span class="project-badge">Copywriting</span>
-                    <h3>Content & Copy Work</h3>
-                    <p>A growing portfolio of copywriting and content strategy work — including persuasive service descriptions, professional resume rewrites, social media copy, and SEO-optimized content for various clients.</p>
-                    <a href="https://wa.me/2347042804483" class="project-link">Request Samples <i class="fas fa-external-link-alt"></i></a>
+                <div class="hero-visual">
+                    <div class="visual-card">
+                        <div class="card-head">
+                            <div class="card-avatar">MJ</div>
+                            <div class="card-status">Available</div>
+                        </div>
+                        <div class="card-title">Mohammed Jamiu</div>
+                        <div class="card-sub">Content Strategist · Web Developer</div>
+                        <div class="mini-stats">
+                            <div class="mini-stat"><div class="num">8+</div><div class="lbl">Skills</div></div>
+                            <div class="mini-stat"><div class="num">2</div><div class="lbl">Products</div></div>
+                            <div class="mini-stat"><div class="num">24h</div><div class="lbl">Reply</div></div>
+                        </div>
+                        <div class="card-bar"><div class="card-bar-fill"></div></div>
+                        <div class="card-bar-label"><span>Client satisfaction focus</span><span>82%</span></div>
+                    </div>
                 </div>
             </div>
-
-            <div class="project-card">
-                <div class="project-img">
-                    <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=600&q=80" alt="Python Scripts">
+            <div class="store-strip">
+                <div class="store-strip-text">
+                    <h3>Browse the EET Store</h3>
+                    <p>Resume kits, content playbooks, and more — ready to use today.</p>
                 </div>
-                <div class="project-info">
-                    <span class="project-badge">In Progress</span>
-                    <h3>Python Automation Scripts</h3>
-                    <p>A growing collection of Python scripts including a USD-to-Naira currency converter, conditional logic programs, and automation experiments — built as part of an ongoing development journey.</p>
-                    <a href="#" class="project-link">View Project <i class="fas fa-external-link-alt"></i></a>
+                <a href="https://selar.com/4149j4d447" target="_blank" class="btn btn-gold"><i class="fas fa-store"></i> Visit Store</a>
+            </div>
+        </section>
+
+        <!-- ABOUT -->
+        <section class="view" id="view-about">
+            <div class="eyebrow"><i class="fas fa-user" style="font-size:9px;"></i> About</div>
+            <h2 class="view-title">Strategic content meets <span class="accent-teal">clean code</span>.</h2>
+            <p class="view-sub">The two forces behind everything I build.</p>
+            <div class="about-grid">
+                <div class="about-text">
+                    <p>I'm <strong>Mohammed Jamiu</strong> — a Digital Content Strategist, Web Developer, and Copywriter based in Ilorin, Nigeria. I help individuals and businesses grow their presence online by combining strategic content with clean, modern web development.</p>
+                    <p>Whether you need a website that converts visitors into clients, copy that compels people to take action, an SEO strategy that drives organic traffic, or a resume that lands interviews — I bring the full package.</p>
+                    <p>I also study forex trading, with a long-term goal of combining technology and financial markets to build powerful data-driven tools. I build. I sell. I trade.</p>
+                </div>
+                <div class="skill-cloud">
+                    <span class="pill">Copywriting</span><span class="pill">SEO</span><span class="pill">Digital Marketing</span>
+                    <span class="pill">Web Development</span><span class="pill gold">AI Automation</span>
+                    <span class="pill">Resume Writing</span><span class="pill">Content Strategy</span><span class="pill gold">Digital Products</span>
                 </div>
             </div>
+        </section>
 
-        </div>
-    </div>
-</section>
+        <!-- SERVICES -->
+        <section class="view" id="view-services">
+            <div class="eyebrow"><i class="fas fa-briefcase" style="font-size:9px;"></i> What I Do</div>
+            <h2 class="view-title">Services</h2>
+            <p class="view-sub">Strategic content, persuasive copy, and clean web development — here's what I offer.</p>
+            <div class="card-grid">
+                <div class="feature-card"><div class="ic">✍️</div><h3>Copywriting & Email Sequences</h3><p>Persuasive copy that turns readers into buyers — sales pages, landing pages, and nurture sequences that drive conversions.</p></div>
+                <div class="feature-card"><div class="ic">🔍</div><h3>SEO Content Optimization</h3><p>Keyword research, on-page optimization, and headlines and meta descriptions that actually get clicked.</p></div>
+                <div class="feature-card"><div class="ic">💻</div><h3>Web Development</h3><p>Clean, fast, mobile-first websites and landing pages built to convert — from a single page to a full business site.</p></div>
+                <div class="feature-card"><div class="ic">📄</div><h3>Resume & Career Documents</h3><p>ATS-friendly resumes, cover letters, and LinkedIn rewrites that help you stand out and get called back.</p></div>
+                <div class="feature-card"><div class="ic">🤖</div><h3>AI-Assisted Content Systems</h3><p>Repeatable content workflows using AI tools — plan weeks of content in hours without losing your voice.</p></div>
+                <div class="feature-card"><div class="ic">📦</div><h3>Digital Product Creation</h3><p>From idea to a polished, sellable guide or template kit — ready for Gumroad or Selar.</p></div>
+            </div>
+        </section>
 
-<!-- CONTACT -->
-<section id="contact" class="contact-section">
-    <div class="container">
-        <h2>Get In Touch</h2>
-        <p class="contact-sub">Need a website, copy that converts, or a resume that lands interviews? Let's talk!</p>
-        <div class="whatsapp-banner">
-            <p>💬 Reach me instantly on WhatsApp or Telegram — I respond fast!</p>
-            <a href="https://wa.me/2347042804483?text=Hi%20Mohammed!%20I%20saw%20your%20portfolio%20and%20I%27d%20like%20to%20hire%20you." target="_blank" class="btn-wa-big">
-                <i class="fab fa-whatsapp"></i> Chat on WhatsApp
-            </a>
-            &nbsp;&nbsp;
-            <a href="https://t.me/globalhustler" target="_blank" class="btn-wa-big" style="background:#0088cc; margin-top:10px;">
-                <i class="fab fa-telegram"></i> Message on Telegram
-            </a>
-        </div>
-        <form class="contact-form" action="https://formspree.io/f/mwvdywrg" method="POST">
-            <input type="text" name="name" placeholder="Your Name" required>
-            <input type="email" name="email" placeholder="Your Email" required>
-            <textarea name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
-            <button type="submit" class="btn">Send Message</button>
-        </form>
-    </div>
-</section>
+        <!-- PRODUCTS -->
+        <section class="view" id="view-products">
+            <div class="eyebrow"><i class="fas fa-box-open" style="font-size:9px;"></i> Shop</div>
+            <h2 class="view-title">Digital Products</h2>
+            <p class="view-sub">Built once, made to help you move faster than I did.</p>
+            <div class="card-grid" style="max-width:720px;">
+                <div class="feature-card product-card">
+                    <span class="product-badge">Resume Kit</span>
+                    <h3>Career Pivot Resume Kit</h3>
+                    <p>A step-by-step system to rewrite your story and land interviews in a new field — swipe files, ATS tips, real examples.</p>
+                    <a href="https://selar.com/4149j4d447" target="_blank" class="product-link">View on Selar <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="feature-card product-card">
+                    <span class="product-badge">Content System</span>
+                    <h3>AI Content Engine Playbook</h3>
+                    <p>Plan 30 days of content for X, Instagram, and TikTok in one 3-hour session — prompts, workflows, scripts.</p>
+                    <a href="https://selar.com/4149j4d447" target="_blank" class="product-link">View on Selar <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="store-strip">
+                <div class="store-strip-text"><h3>More on the way</h3><p>New templates and guides added regularly.</p></div>
+                <a href="https://selar.com/4149j4d447" target="_blank" class="btn btn-gold"><i class="fas fa-store"></i> Visit the Full Store</a>
+            </div>
+        </section>
 
-<!-- FOOTER -->
-<footer>
-    <div class="social-links">
-        <a href="https://wa.me/2347042804483" target="_blank" class="whatsapp" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-        <a href="https://t.me/globalhustler" target="_blank" class="telegram" title="Telegram"><i class="fab fa-telegram"></i></a>
-        <a href="https://www.tiktok.com/@your_tiktok_username" target="_blank" class="tiktok" title="TikTok"><i class="fab fa-tiktok"></i></a>
+        <!-- PROJECTS -->
+        <section class="view" id="view-projects">
+            <div class="eyebrow"><i class="fas fa-diagram-project" style="font-size:9px;"></i> Built & Shipped</div>
+            <h2 class="view-title">Projects</h2>
+            <p class="view-sub">Things I've built from a phone, no laptop.</p>
+            <div class="feature-card project-feature">
+                <div class="project-top">📈</div>
+                <span class="project-badge">Forex Education</span>
+                <h3>FXLearn</h3>
+                <p>A forex education platform teaching Smart Money Concepts from the ground up — structure, liquidity, and risk management explained simply.</p>
+            </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section class="view" id="view-contact">
+            <div class="eyebrow"><i class="fas fa-envelope" style="font-size:9px;"></i> Get In Touch</div>
+            <h2 class="view-title">Let's Work Together</h2>
+            <p class="view-sub">Tell me what you need, or reach out directly — I usually reply fast.</p>
+            <div class="contact-grid">
+                <div class="contact-side">
+                    <h3>Direct message</h3>
+                    <p>Fastest way to reach me.</p>
+                    <a href="https://wa.me/2347060480170" target="_blank" class="btn btn-primary"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                    <a href="https://t.me/mj_tech_hustler" target="_blank" class="btn btn-ghost"><i class="fab fa-telegram"></i> Telegram</a>
+                    <button type="button" onclick="copyEmail()" class="btn btn-gold"><i class="fas fa-envelope"></i> Copy My Email</button>
+                </div>
+                <form class="contact-form" onsubmit="submitContactForm(event, this); return false;">
+                    <input type="text" name="name" placeholder="Your name" required>
+                    <input type="email" name="email" placeholder="Your email" required>
+                    <textarea name="message" rows="5" placeholder="What do you need help with?" required></textarea>
+                    <button type="submit" class="btn btn-primary" style="align-self:flex-start;">Send Message</button>
+                </form>
+            </div>
+            <footer class="site-footer">
+                <div class="social-row">
+                    <a href="https://wa.me/2347060480170" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://x.com/mj_tech_hustler" target="_blank"><i class="fab fa-x-twitter"></i></a>
+                    <a href="https://instagram.com/mj_tech_hustler" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://tiktok.com/@mj_tech_hustler" target="_blank"><i class="fab fa-tiktok"></i></a>
+                    <a href="https://youtube.com/@mj_tech_hustler" target="_blank"><i class="fab fa-youtube"></i></a>
+                </div>
+                <div class="copy">&copy; 2026 Mohammed Jamiu. All rights reserved.</div>
+            </footer>
+        </section>
+
     </div>
-    <p>&copy; 2026 Mohammed Jamiu. All rights reserved.</p>
-    <p style="margin-top:8px;font-size:13px">📧 atolagbemohammedjamiu@gmail.com</p>
-</footer>
+</div>
+
+<button class="exit-home" id="exitHomeBtn" data-view="home"><i class="fas fa-house"></i> Back to Home</button>
 
 <script>
-    function toggleMenu() {
-        document.getElementById('main-nav').classList.toggle('open');
+const views = ['home','about','services','products','projects','contact'];
+const navLinks = Array.from(document.querySelectorAll('.menu-item[data-view]'));
+const exitHomeBtn = document.getElementById('exitHomeBtn');
+const menuBtn = document.getElementById('menuBtn');
+const menuDropdown = document.getElementById('menuDropdown');
+const menuBtnLabel = document.getElementById('menuBtnLabel');
+const labelMap = { home:'Home', about:'About', services:'Services', products:'Products', projects:'Projects', contact:'Contact' };
+
+function openMenu(open){
+    menuDropdown.classList.toggle('open', open);
+    menuBtn.classList.toggle('open', open);
+    menuBtn.setAttribute('aria-expanded', open);
+}
+menuBtn.addEventListener('click', (e) => { e.stopPropagation(); openMenu(!menuDropdown.classList.contains('open')); });
+document.addEventListener('click', (e) => { if(!menuDropdown.contains(e.target) && e.target !== menuBtn) openMenu(false); });
+document.addEventListener('keydown', (e) => { if(e.key === 'Escape') openMenu(false); });
+
+function showView(name){
+    document.querySelectorAll('.view').forEach(v => v.classList.remove('active'));
+    const target = document.getElementById('view-' + name);
+    if(target) target.classList.add('active');
+    navLinks.forEach(a => a.classList.toggle('active', a.dataset.view === name));
+    menuBtnLabel.textContent = labelMap[name] || 'Menu';
+    exitHomeBtn.classList.toggle('show', name !== 'home');
+    openMenu(false);
+    document.querySelector('.view-container').scrollIntoView({behavior:'smooth', block:'start'});
+}
+
+document.querySelectorAll('[data-view]').forEach(el => el.addEventListener('click', (e) => {
+    if(!views.includes(el.dataset.view)) return;
+    e.preventDefault();
+    showView(el.dataset.view);
+}));
+
+window.addEventListener('scroll', () => {
+    document.getElementById('topbar').classList.toggle('scrolled', window.scrollY > 20);
+});
+
+let toastTimer;
+function showToast(msg){
+    const t = document.getElementById('toast');
+    t.textContent = msg;
+    t.classList.add('show');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(() => t.classList.remove('show'), 3000);
+}
+function submitContactForm(e, form){
+    e.preventDefault();
+    const name = form.name.value, email = form.email.value, message = form.message.value;
+    const fullMsg = `From: ${name} (${email})\n\n${message}`;
+    const target = 'eetbuissness@gmail.com';
+    if(navigator.clipboard && navigator.clipboard.writeText){
+        navigator.clipboard.writeText(fullMsg).then(
+            () => showToast('Message copied — paste it into an email to ' + target),
+            () => showToast('Please email ' + target + ' directly — copy failed')
+        );
+    } else {
+        showToast('Please email ' + target + ' directly with your message');
     }
+}
+function copyEmail(){
+    const email = 'eetbuissness@gmail.com';
+    if(navigator.clipboard && navigator.clipboard.writeText){
+        navigator.clipboard.writeText(email).then(
+            () => showToast('Copied: ' + email + ' — paste it into your mail app'),
+            () => showToast("Couldn't copy — my email is " + email)
+        );
+    } else {
+        showToast('My email is ' + email);
+    }
+}
 </script>
+
+<div id="toast"></div>
 </body>
 </html>
